@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>猿小卿的博客</title>
+  
+  
+  <link href="http://example.com/atom.xml" rel="self"/>
+  
+  <link href="http://example.com/"/>
+  <updated>2022-05-03T16:29:48.101Z</updated>
+  <id>http://example.com/</id>
+  
+  <author>
+    <name>程小卿</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>java8函数式编程</title>
+    <link href="http://example.com/2022/05/04/java8%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B/%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B/"/>
+    <id>http://example.com/2022/05/04/java8%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B/%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B/</id>
+    <published>2022-05-04T03:17:30.000Z</published>
+    <updated>2022-05-03T16:29:48.101Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Java中重要的函数接口"><a href="#Java中重要的函数接口" class="headerlink" title="Java中重要的函数接口"></a>Java中重要的函数接口</h1><p><strong>粗体</strong><br>分隔符</p><hr><p><strong>两个空格换行</strong><br>我是  文本</p><p>标签<br><br><br><br><br>标签</p><p>无序列表</p><ul><li>第一项</li><li>第二项<br>或者 ‘+’ 或者 ‘-‘</li></ul><ul><li>第一项</li><li>第二项<br>有序列表</li></ul><ol><li>第一项</li><li>第二项</li><li>第三项</li></ol>]]></content>
+    
+    
+    <summary type="html">java8函数式编程</summary>
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>markdown语法</title>
+    <link href="http://example.com/2022/05/03/java8%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B/markdown%E8%AF%AD%E6%B3%95/"/>
+    <id>http://example.com/2022/05/03/java8%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B/markdown%E8%AF%AD%E6%B3%95/</id>
+    <published>2022-05-03T14:17:30.000Z</published>
+    <updated>2022-05-03T16:59:00.416Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>粗体</strong><br>分隔符</p><hr><p><strong>两个空格换行</strong><br>我是  文本</p><p>标签<br><br><br><br><br>标签</p><p>无序列表</p><ul><li>第一项</li><li>第二项<br>或者 ‘+’ 或者 ‘-‘</li></ul><ul><li>第一项</li><li>第二项<br>有序列表</li></ul><ol><li>第一项</li><li>第二项</li><li>第三项</li></ol><h2 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h2><blockquote><p>教室是人类灵魂的工程师</p><blockquote><p>嵌套内容：书是人类进步的阶梯</p></blockquote></blockquote><h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><p>如果是<strong>段落中的一段代码</strong>，可以使用反引号包裹起来即可：C++里<code>printf()</code>函数可以格式化输出！  </p><p>如果是<strong>整段代码</strong>，使用三个反引号包裹起来，并指定一种语言</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">    System.out.println(<span class="string">&quot;你好，markdown~&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h2 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h2><p>一个超链接<a href="https://www.runoob.com/">菜鸟教程</a></p><h2 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h2><p><img src="https://zbq666.com/image/4120e4012553475697f9a81638c3e43c.jpeg" alt="网络图片"></p><h2 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h2><table><thead><tr><th>表头</th><th>表头</th></tr></thead><tbody><tr><td>单元格</td><td>单元格</td></tr><tr><td>单元格</td><td>单元格</td></tr></tbody></table><p>-: 设置内容和标题栏居右对其<br>:- 设置内容和标题栏居左对其<br>:-: 设置内容和标题栏居中对其</p><table><thead><tr><th align="right">右对齐</th><th align="center">居中对齐</th></tr></thead><tbody><tr><td align="right">+++++内容右对齐+</td><td align="center">内容剧中对齐</td></tr></tbody></table><h2 id="markdown-高级"><a href="#markdown-高级" class="headerlink" title="markdown 高级"></a>markdown 高级</h2><h3 id="支持html标签"><a href="#支持html标签" class="headerlink" title="支持html标签"></a>支持html标签</h3><p>不在markdown涵盖范围之内的标签，都可以直接在文档里面使用html<br>目前支持的html元素有：<code>&lt;kdb&gt; &lt;b&gt; &lt;i&gt; &lt;em&gt; &lt;sup&gt; &lt;sub&gt;</code></p>]]></content>
+    
+    
+    <summary type="html">markdown语法</summary>
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>图片名字</title>
+    <link href="http://example.com/2022/05/03/%E5%9B%BE%E7%89%87%E5%90%8D%E5%AD%97/%E5%9B%BE%E7%89%87%E5%90%8D%E5%AD%97/"/>
+    <id>http://example.com/2022/05/03/%E5%9B%BE%E7%89%87%E5%90%8D%E5%AD%97/%E5%9B%BE%E7%89%87%E5%90%8D%E5%AD%97/</id>
+    <published>2022-05-03T10:35:30.000Z</published>
+    <updated>2022-05-03T10:36:45.986Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="https://zbq666.com/image/v2-9230de6dc4920b5f2b89d465f28b97af_r.jpg" alt="图片名称八个字"></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://zbq666.com/image/v2-9230de6dc4920b5f2b89d465f28b97af_r.jpg&quot; alt=&quot;图片名称八个字&quot;&gt;&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>代码演示</title>
+    <link href="http://example.com/2022/05/03/%E4%BB%A3%E7%A0%81%E5%9D%97%E6%BC%94%E7%A4%BA/%E6%BC%94%E7%A4%BA/"/>
+    <id>http://example.com/2022/05/03/%E4%BB%A3%E7%A0%81%E5%9D%97%E6%BC%94%E7%A4%BA/%E6%BC%94%E7%A4%BA/</id>
+    <published>2022-05-03T03:17:30.000Z</published>
+    <updated>2022-05-03T15:01:01.160Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="二级标题"><a href="#二级标题" class="headerlink" title="二级标题"></a>二级标题</h2><p>Hello JavaScript<br>文章内容文章内容文章内容文章内容<br>文章内容文章内容文章内容文章内容<br>文章内容文章内容文章内容文章内容<br>文章内容文章内容文章内容文章内容<br>文章内容文章内容文章内容文章内容<br>文章内容文章内容文章内容文章内容<br>文章内容文章内容文章内容文章内容</p><h2 id="二级标题-1"><a href="#二级标题-1" class="headerlink" title="二级标题"></a>二级标题</h2><p>Hello JavaScript<br>文章内容文章内容文章内容文章内容<br>文章内容文章内容文章内容文章内容<br>文章内容文章内容文章内容文章内容<br>文章内容文章内容文章内容文章内容<br>文章内容文章内容文章内容文章内容<br>文章内容文章内容文章内容文章内容<br>文章内容文章内容文章内容文章内容</p><h2 id="二级标题-2"><a href="#二级标题-2" class="headerlink" title="二级标题"></a>二级标题</h2><p>Hello JavaScript<br>文章内容文章内容文章内容文章内容<br>文章内容文章内容文章内容文章内容<br>文章内容文章内容文章内容文章内容<br>文章内容文章内容文章内容文章内容<br>文章内容文章内容文章内容文章内容<br>文章内容文章内容文章内容文章内容<br>文章内容文章内容文章内容文章内容</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">a</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;hello word&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+    <summary type="html">代码块演示</summary>
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>我的博客搭建成功了</title>
+    <link href="http://example.com/2022/05/02/hello-world/"/>
+    <id>http://example.com/2022/05/02/hello-world/</id>
+    <published>2022-05-02T12:56:40.117Z</published>
+    <updated>2022-05-02T15:02:02.899Z</updated>
+    
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt; for</summary>
+      
+    
+    
+    
+    <category term="Android" scheme="http://example.com/categories/Android/"/>
+    
+    
+    <category term="Helloworld" scheme="http://example.com/tags/Helloworld/"/>
+    
+    <category term="博客搭建" scheme="http://example.com/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
+    
+    <category term="tags" scheme="http://example.com/tags/tags/"/>
+    
+  </entry>
+  
+</feed>
