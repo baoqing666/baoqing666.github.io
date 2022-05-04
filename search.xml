@@ -8,7 +8,7 @@
       <link href="/2022/05/04/java8%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B/%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B/"/>
       <url>/2022/05/04/java8%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B/%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B/</url>
       
-        <content type="html"><![CDATA[<h1 id="Java中重要的函数接口"><a href="#Java中重要的函数接口" class="headerlink" title="Java中重要的函数接口"></a>Java中重要的函数接口</h1><p><strong>粗体</strong><br>分隔符</p><hr><p><strong>两个空格换行</strong><br>我是  文本</p><p>标签<br><br><br><br><br>标签</p><p>无序列表</p><ul><li>第一项</li><li>第二项<br>或者 ‘+’ 或者 ‘-‘</li></ul><ul><li>第一项</li><li>第二项<br>有序列表</li></ul><ol><li>第一项</li><li>第二项</li><li>第三项</li></ol>]]></content>
+        <content type="html"><![CDATA[<h2 id="Java中重要的函数接口"><a href="#Java中重要的函数接口" class="headerlink" title="Java中重要的函数接口"></a>Java中重要的函数接口</h2><table><thead><tr><th>接口</th><th>参数</th><th>返回类型</th><th>示例</th></tr></thead><tbody><tr><td>Predicate<T></td><td>T</td><td>boolean</td><td>唱片已经发行了吗</td></tr><tr><td>Consumer<T></td><td>T</td><td>void</td><td>输出一个值</td></tr><tr><td>Function&lt;T,R&gt;</td><td>T</td><td>R</td><td>获取Artist对象名字</td></tr><tr><td>Supplier<T></td><td>None</td><td>T</td><td>工厂方法</td></tr><tr><td>UnaryOperator<T></td><td>T</td><td>T</td><td>逻辑非(!)</td></tr><tr><td>BinaryOperator<T></td><td>(T,T)</td><td>T</td><td>求两个数的乘积</td></tr></tbody></table>]]></content>
       
       
       
