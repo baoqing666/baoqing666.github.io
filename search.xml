@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+  
+    
+    <entry>
+      <title>JVM内存模型</title>
+      <link href="/2023/11/05/JVM%E5%86%85%E5%AD%98%E6%A8%A1%E5%9E%8B/JVM%E5%86%85%E5%AD%98%E6%A8%A1%E5%9E%8B/"/>
+      <url>/2023/11/05/JVM%E5%86%85%E5%AD%98%E6%A8%A1%E5%9E%8B/JVM%E5%86%85%E5%AD%98%E6%A8%A1%E5%9E%8B/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>面试复习</title>
+      <link href="/2023/11/05/%E9%9D%A2%E8%AF%95%E5%A4%8D%E4%B9%A0/%E9%9D%A2%E8%AF%95%E5%A4%8D%E4%B9%A0/"/>
+      <url>/2023/11/05/%E9%9D%A2%E8%AF%95%E5%A4%8D%E4%B9%A0/%E9%9D%A2%E8%AF%95%E5%A4%8D%E4%B9%A0/</url>
+      
+        <content type="html"><![CDATA[<h2 id="Mysql"><a href="#Mysql" class="headerlink" title="Mysql"></a>Mysql</h2><h4 id="索引的基本原理："><a href="#索引的基本原理：" class="headerlink" title="索引的基本原理："></a>索引的基本原理：</h4><ul><li>底层其实是一个B+Tree结构，目的就是缩小扫描范围，避免全表扫描</li><li>首先像主键或unique约束的字段会自动加一个索引，表的每一条记录都会有一个存储编号</li><li>索引在不同的存储引擎中都是以B-Tree形式存在的</li><li>首先它会在底层进行排序，加入第一个id索引100，那么就从100开始，第二个99则放在二叉树左边，第三个为120就放在右边，遵循左小右大原则排序</li><li>机型查找的时候，从where字句后如果字段又索引，则从二叉树中去匹配，匹配的时候会将字段&#x3D;值转换为每一条记录的存储编号，可以快速定位到</li></ul><h4 id="索引适用场景"><a href="#索引适用场景" class="headerlink" title="索引适用场景"></a>索引适用场景</h4><hr><h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><p>如果是<strong>段落中的一段代码</strong>，可以使用反引号包裹起来即可：C++里<code>printf()</code>函数可以格式化输出！  </p><p>如果是<strong>整段代码</strong>，使用三个反引号包裹起来，并指定一种语言</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">    System.out.println(<span class="string">&quot;你好，markdown~&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>linux常用命令</title>
+      <link href="/2023/11/02/linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"/>
+      <url>/2023/11/02/linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</url>
+      
+        <content type="html"><![CDATA[<h2 id="防火墙操作命令"><a href="#防火墙操作命令" class="headerlink" title="防火墙操作命令"></a>防火墙操作命令</h2><table><thead><tr><th>解释</th><th>命令</th></tr></thead><tbody><tr><td>开启防火墙</td><td>systemctl start firewalld</td></tr><tr><td>关闭防火墙</td><td>systemctl stop firewalld</td></tr><tr><td>重启防火墙</td><td>systemctl restart firewalld</td></tr><tr><td>重启防火墙</td><td>firewall-cmd –reload</td></tr><tr><td>开启端口</td><td>firewall-cmd –zone&#x3D;public –add-port&#x3D;10002&#x2F;tcp –permanent</td></tr><tr><td>检查修改是否生效</td><td>firewall-cmd –zone&#x3D; public –query-port&#x3D;10002&#x2F;tcp</td></tr><tr><td>移除指定端口</td><td>firewall-cmd –permanent –remove-port&#x3D;123&#x2F;tcp</td></tr><tr><td>查看已开放端口</td><td>firewall-cmd –zone&#x3D;public –list-ports</td></tr><tr><td>查看防火墙状态</td><td>systemctl status firewalld</td></tr><tr><td>看指定端口号的进程情况</td><td>netstat -tunlp l grep 端口号</td></tr><tr><td>查看端口的连接客户端IP</td><td>netstat -anp l grep 端口号</td></tr><tr><td>查看端口的连接客户端IP</td><td>netstat -anp</td></tr><tr><td>查看某一端口的占用情况</td><td>lsof -i:端口号</td></tr></tbody></table><hr><h2 id="log日志查看"><a href="#log日志查看" class="headerlink" title="log日志查看"></a>log日志查看</h2><table><thead><tr><th>解释</th><th>命令</th></tr></thead><tbody><tr><td>用于显示文件的末尾内容</td><td>tail -n 100 filename</td></tr><tr><td>用于显示文件的开头内容</td><td>head -n 100 filename</td></tr><tr><td>日志查询</td><td>tail -fn 1000 test.log</td></tr><tr><td>循环读取日志</td><td>tail -f error.log</td></tr></tbody></table><hr><h2 id="docker-常用命令"><a href="#docker-常用命令" class="headerlink" title="docker 常用命令"></a>docker 常用命令</h2><table><thead><tr><th>解释</th><th>命令</th></tr></thead><tbody><tr><td>查看本地镜像列表</td><td>docker images</td></tr><tr><td>列出所有在运行的容器信息</td><td>docker ps</td></tr><tr><td>启动一个容器</td><td>docker start 容器Id</td></tr><tr><td>停止一个运行中的容器</td><td>docker stop 容器Id</td></tr><tr><td>重启容器</td><td>docker restart 容器Id</td></tr><tr><td>杀掉一个运行中的容器</td><td>docker kill tomcat7</td></tr><tr><td>删除一个</td><td>docker rm -f db01</td></tr><tr><td>强制删除本地镜像</td><td>docker rmi -f 容器id</td></tr></tbody></table><hr><h2 id="错误排查命令"><a href="#错误排查命令" class="headerlink" title="错误排查命令"></a>错误排查命令</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">查看进程打开的文件的工具 lsof -p 54779 | wc -l </span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>分布式场景</title>
+      <link href="/2022/05/22/%E5%88%86%E5%B8%83%E5%BC%8F%E4%BA%8B%E5%8A%A1/%E5%88%86%E5%B8%83%E5%BC%8F/"/>
+      <url>/2022/05/22/%E5%88%86%E5%B8%83%E5%BC%8F%E4%BA%8B%E5%8A%A1/%E5%88%86%E5%B8%83%E5%BC%8F/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>人生断舍离</title>
+      <link href="/2022/05/15/%E6%96%AD%E8%88%8D%E7%A6%BB/%E6%96%AD%E8%88%8D%E7%A6%BB/"/>
+      <url>/2022/05/15/%E6%96%AD%E8%88%8D%E7%A6%BB/%E6%96%AD%E8%88%8D%E7%A6%BB/</url>
+      
+        <content type="html"><![CDATA[<h2 id="斩断物欲-舍弃废物-脱离执念"><a href="#斩断物欲-舍弃废物-脱离执念" class="headerlink" title="斩断物欲 舍弃废物 脱离执念"></a>斩<code>断</code>物欲 <code>舍</code>弃废物 脱<code>离</code>执念</h2><blockquote><p>很多人一直活得不快乐，如果你深入探究会发现，这跟他们执着与某些观念有很大关系。这些观念往往是他们从小到现在，人人都视为理所当然的，也正因如此，大家很容易陷在其中。<br>比方说，人们追求快乐，许多人认为自己如果能够拥有更多的钱，更豪华的房子，更有人性的老板，更体贴的伴侣，更听话的小孩···就会更快乐。但这些”快乐观念”,也正是令我们陷在不快乐里的原因，不是吗？<br>对完美生活认识的迷失，就是人很难快乐的原因。然而又很多观念都已经根深地固，以致很少有人回去质疑，或者静下来想想这些是否就是造成自己不快乐的根本原因。<br>沮丧的人说：”<code>我就是没钱，所以才愁眉苦脸。</code>但是有些人比你还没钱，为什么人家也没有愁眉苦脸？”<br>烦恼的人说：”<code>没工作我会饿死，所以我才烦恼。</code>但烦恼是能让你变有钱，还是烦恼可以让你找到工作？”<br>愤恨不平的人说：”<code>他让我受苦，我绝对不会让他好过。</code>“但是让他难过，你就会好过吗？<br>失去所爱的人说：”<code>没有了她，叫我怎么活？</code>“可是在没有他之前，你不也活得好好的？<br>诸事不顺的人说：”<code>为什么上天老跟我作对？</code>“然而你又怎么知道，上天不会有更好的安排？<br>愁眉不展的人说：”<code>我工作不顺，还有一堆事情没完成，所以不快乐。</code>“然而是谁规定说工作不顺，或事情没完成，就不能快乐？<br><code>这些问题你想过吗？</code><br>我们总期待人生能<code>顺心如意</code>，结果却往往<code>事与愿违</code>，为什么？<br>因为如果我们凡是都要<code>顺心</code>，又怎么可能<code>事事如意</code>？<br>其实，我们都<code>陷在执着</code>的<code>观念</code>上。</p></blockquote><h2 id="不要陷在执着的观念上"><a href="#不要陷在执着的观念上" class="headerlink" title="不要陷在执着的观念上"></a>不要<code>陷在执着</code>的<code>观念</code>上</h2><ul><li><code>幸福</code>，不是没有<code>缺憾</code>；有缺憾，也会有别人没有的幸福</li><li><code>快乐</code>，就是<code>放下</code>“<code>你执着的认为能使你快乐的东西</code>“</li><li>别再忙着去追求了，你没有发现吗，就是因为太在乎追求，反而让你意识不到自己早已拥有的一切</li><li><code>你不可能错过什么，因为错过的都是不属于你的</code></li><li><code>失去某人</code>,你为什么放不下？因为你原本没有一些特质的，而离开你的人却拥有这些特质，所以你的内心就会永远也放不下那个人。</li><li><code>你最受不了别人的地方，很可能正是别人最受不了你的地方。</code></li><li>人不想有任何<code>烦恼</code>，却没有想到，<code>自己本身恰恰就是所有烦恼的根源</code></li><li>快乐与不快乐事实上是同一件事，只是人们常受时间造成的假象的迷糊，才会以为它们是分开的</li><li><code>我们不该总是想怎么满足自己，而应该想想为什么自己会有那么多不满</code></li><li><code>有时候，不是对方不在乎你，而是你把对方看的太重，以致压垮彼此</code></li><li>如果你发现有人<code>批评你</code>，你在生气前，先要问，自己是不是也会这样批评自己？</li><li>你有你的缺点，他又他的缺点，双方都不完美，但你们的关系却可以是圆满的。就像月虽圆缺，但是你不会说月亮是不圆满的，对吗？</li><li><code>如果你还爱对方，何不放他自由？而如果你不爱他，为什么不放自己自由</code></li><li>世界上有千百万中烦恼，解决的方法只有一种，那就是觉醒。</li><li>使我们生命圆满的路径，不是避开崎岖起伏，而是走过崎岖起伏。</li><li>抓不到<code>兔子</code>,我们还有<code>温暖的阳光与幽香的树叶</code>；钓不到<code>鱼</code>，我们还有<code>河岸风景</code>与<code>草上发亮的珍珠</code>,何必限定自己只有抓到<code>兔子</code>或钓到<code>鱼</code>才能快乐？</li><li>得失之间，全以你的视野而定；如果你注意的是失去，你就只有失去；如果你看到的是得到，你就真能得到；</li><li>人生最糟的事不是死亡，而是错过人生。当你学会如何面对死亡，你就学会了如何生活。</li></ul>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Shell脚本语法</title>
+      <link href="/2022/05/10/Shell%E8%84%9A%E6%9C%AC%E8%AF%AD%E6%B3%95/Shell%E8%84%9A%E6%9C%AC%E8%AF%AD%E6%B3%95/"/>
+      <url>/2022/05/10/Shell%E8%84%9A%E6%9C%AC%E8%AF%AD%E6%B3%95/Shell%E8%84%9A%E6%9C%AC%E8%AF%AD%E6%B3%95/</url>
+      
+        <content type="html"><![CDATA[<h2 id="Shell概述"><a href="#Shell概述" class="headerlink" title="Shell概述"></a>Shell概述</h2><p>Shell是一个<code>命令行编辑器</code>，它接收应用程序&#x2F;用户命令，然后调用操作系统内核。<br>Shell还是一个功能相当强大的编程语言。</p><h2 id="Shell解析器"><a href="#Shell解析器" class="headerlink" title="Shell解析器"></a>Shell解析器</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">查看所有解析内容</span></span><br><span class="line">cat /etc/shells</span><br><span class="line">/bin/sh</span><br><span class="line">/bin/bash</span><br><span class="line">/usr/bin/sh</span><br><span class="line">/usr/bin/bash</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">常用的shell脚本 .sh .bash</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">其中.bash依赖于.sh</span></span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>java8函数式编程</title>
+      <link href="/2022/05/04/java8%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B/%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B/"/>
+      <url>/2022/05/04/java8%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B/%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B/</url>
+      
+        <content type="html"><![CDATA[<h2 id="Java8中重要的函数接口"><a href="#Java8中重要的函数接口" class="headerlink" title="Java8中重要的函数接口"></a>Java8中重要的函数接口</h2><table><thead><tr><th>接口</th><th>参数</th><th>返回类型</th><th>示例</th></tr></thead><tbody><tr><td>Predicate<T></td><td>T</td><td>boolean</td><td>唱片已经发行了吗</td></tr><tr><td>Consumer<T></td><td>T</td><td>void</td><td>输出一个值</td></tr><tr><td>Function&lt;T,R&gt;</td><td>T</td><td>R</td><td>获取Artist对象名字</td></tr><tr><td>Supplier<T></td><td>None</td><td>T</td><td>工厂方法</td></tr><tr><td>UnaryOperator<T></td><td>T</td><td>T</td><td>逻辑非(!)</td></tr><tr><td>BinaryOperator<T></td><td>(T,T)</td><td>T</td><td>求两个数的乘积</td></tr></tbody></table><h2 id="Java8提供的时间处理类"><a href="#Java8提供的时间处理类" class="headerlink" title="Java8提供的时间处理类"></a>Java8提供的时间处理类</h2><p>java8借鉴了第三方日期库joda很多优点 <code>java.time包</code></p><table><thead><tr><th>类名</th><th>描述</th></tr></thead><tbody><tr><td>Instant</td><td>时间戳</td></tr><tr><td>Duration</td><td>持续时间，时间差</td></tr><tr><td>LocalDate</td><td>只包含日期， 比如: 2022-05-04</td></tr><tr><td>LocalTime</td><td>只包含时间， 比如：13:14:30</td></tr><tr><td>LocalDateTime</td><td>包含日期时间，比如: 2022-05-04 13:14:30</td></tr><tr><td>Period</td><td>时间段</td></tr><tr><td>ZoneOffset</td><td>时区偏移量，比如：+8:00</td></tr><tr><td>ZonedDateTime</td><td>带时区的时间</td></tr><tr><td>Clock</td><td>时钟，比如获取目前美国纽约的时间</td></tr></tbody></table><h2 id="常用API【LocalDate】"><a href="#常用API【LocalDate】" class="headerlink" title="常用API【LocalDate】"></a>常用API【LocalDate】</h2><ol><li><p>获取今天的日期（年月日）</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 2022-12-10</span></span><br><span class="line"><span class="type">LocalDate</span> <span class="variable">localDate</span> <span class="operator">=</span> LOcalDate.now();</span><br></pre></td></tr></table></figure></li><li><p>指定日期</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 2022-12-10</span></span><br><span class="line"><span class="type">LocalDate</span> <span class="variable">localDate</span> <span class="operator">=</span> LocalDate.of(<span class="number">2022</span>,<span class="number">12</span>,<span class="number">10</span>);</span><br></pre></td></tr></table></figure></li><li><p>获取年，月，日，星期几</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">LocalDate</span> <span class="variable">localDate</span> <span class="operator">=</span> LocalDate.now();</span><br><span class="line"><span class="comment">// 获取年</span></span><br><span class="line"><span class="type">int</span> <span class="variable">year</span> <span class="operator">=</span> localDate.getYear();</span><br><span class="line"><span class="type">int</span> <span class="variable">year1</span> <span class="operator">=</span> localDate.get(ChronoField.YEAR);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 获取月</span></span><br><span class="line"><span class="type">Month</span> <span class="variable">month</span> <span class="operator">=</span> localDate.getMonth();</span><br><span class="line"><span class="type">int</span> <span class="variable">month1</span> <span class="operator">=</span> localDate.get(ChronoField.MONTH_OF_YEAR);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 获取日</span></span><br><span class="line"><span class="type">int</span> <span class="variable">dayOfMonth</span> <span class="operator">=</span> localDate.getDayOfMonth();</span><br><span class="line"><span class="type">int</span> <span class="variable">dayOfMonth1</span> <span class="operator">=</span> localDate.get(ChronoField.DAY_OF_MONTH);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 获取星期级</span></span><br><span class="line"><span class="type">DayOfWeek</span> <span class="variable">dayOfWeek</span> <span class="operator">=</span> localDate.getDayOfWeek();</span><br><span class="line"><span class="type">int</span> <span class="variable">dayOfWeek1</span> <span class="operator">=</span> localDate.get(ChronoField.DAY_OF_WEEK);</span><br></pre></td></tr></table></figure></li><li><p>日期计算<br>日期做减法处理(以1为例)</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 去年</span></span><br><span class="line">localDate.minusYears(<span class="number">1</span>);</span><br><span class="line"><span class="comment">// 上个月</span></span><br><span class="line">localDate.minusMonths(<span class="number">1</span>);</span><br><span class="line"><span class="comment">// 上个星期</span></span><br><span class="line">localDate.minusWeeks(<span class="number">1</span>);</span><br><span class="line"><span class="comment">// 昨天</span></span><br><span class="line">localDate.minusDays(<span class="number">1</span>);</span><br></pre></td></tr></table></figure></li></ol><h2 id="常用时间API"><a href="#常用时间API" class="headerlink" title="常用时间API"></a>常用时间API</h2><p><a href="https://blog.csdn.net/qidasheng2012/article/details/106426769">https://blog.csdn.net/qidasheng2012/article/details/106426769</a></p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>title</title>
+      <link href="/2022/05/04/title/"/>
+      <url>/2022/05/04/title/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>markdown语法</title>
+      <link href="/2022/05/03/java8%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B/markdown%E8%AF%AD%E6%B3%95/"/>
+      <url>/2022/05/03/java8%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B/markdown%E8%AF%AD%E6%B3%95/</url>
+      
+        <content type="html"><![CDATA[<p><strong>粗体</strong><br>分隔符</p><hr><p><strong>两个空格换行</strong><br>我是  文本</p><p>标签<br><br><br><br><br>标签</p><p>无序列表</p><ul><li>第一项</li><li>第二项<br>或者 ‘+’ 或者 ‘-‘</li></ul><ul><li>第一项</li><li>第二项<br>有序列表</li></ul><ol><li>第一项</li><li>第二项</li><li>第三项</li></ol><h2 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h2><blockquote><p>教室是人类灵魂的工程师</p><blockquote><p>嵌套内容：书是人类进步的阶梯</p></blockquote></blockquote><h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><p>如果是<strong>段落中的一段代码</strong>，可以使用反引号包裹起来即可：C++里<code>printf()</code>函数可以格式化输出！  </p><p>如果是<strong>整段代码</strong>，使用三个反引号包裹起来，并指定一种语言</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">    System.out.println(<span class="string">&quot;你好，markdown~&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h2 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h2><p>一个超链接<a href="https://www.runoob.com/">菜鸟教程</a></p><h2 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h2><p><img src="https://www.zbq666.com/image/4120e4012553475697f9a81638c3e43c.jpeg" alt="网络图片"></p><h2 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h2><table><thead><tr><th>表头</th><th>表头</th></tr></thead><tbody><tr><td>单元格</td><td>单元格</td></tr><tr><td>单元格</td><td>单元格</td></tr></tbody></table><p>-: 设置内容和标题栏居右对其<br>:- 设置内容和标题栏居左对其<br>:-: 设置内容和标题栏居中对其</p><table><thead><tr><th align="right">右对齐</th><th align="center">居中对齐</th></tr></thead><tbody><tr><td align="right">+++++内容右对齐+</td><td align="center">内容剧中对齐</td></tr></tbody></table><h2 id="markdown-高级"><a href="#markdown-高级" class="headerlink" title="markdown 高级"></a>markdown 高级</h2><h3 id="支持html标签"><a href="#支持html标签" class="headerlink" title="支持html标签"></a>支持html标签</h3><p>不在markdown涵盖范围之内的标签，都可以直接在文档里面使用html<br>目前支持的html元素有：<code>&lt;kdb&gt; &lt;b&gt; &lt;i&gt; &lt;em&gt; &lt;sup&gt; &lt;sub&gt;</code></p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>图片名字</title>
+      <link href="/2022/05/03/%E5%9B%BE%E7%89%87%E5%90%8D%E5%AD%97/%E5%9B%BE%E7%89%87%E5%90%8D%E5%AD%97/"/>
+      <url>/2022/05/03/%E5%9B%BE%E7%89%87%E5%90%8D%E5%AD%97/%E5%9B%BE%E7%89%87%E5%90%8D%E5%AD%97/</url>
+      
+        <content type="html"><![CDATA[<p><img src="https://www.zbq666.com/image/v2-9230de6dc4920b5f2b89d465f28b97af_r.jpg" alt="图片名称八个字"></p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>代码演示</title>
+      <link href="/2022/05/03/%E4%BB%A3%E7%A0%81%E5%9D%97%E6%BC%94%E7%A4%BA/%E6%BC%94%E7%A4%BA/"/>
+      <url>/2022/05/03/%E4%BB%A3%E7%A0%81%E5%9D%97%E6%BC%94%E7%A4%BA/%E6%BC%94%E7%A4%BA/</url>
+      
+        <content type="html"><![CDATA[<h2 id="二级标题"><a href="#二级标题" class="headerlink" title="二级标题"></a>二级标题</h2><p>Hello JavaScript<br>文章内容文章内容文章内容文章内容<br>文章内容文章内容文章内容文章内容<br>文章内容文章内容文章内容文章内容<br>文章内容文章内容文章内容文章内容<br>文章内容文章内容文章内容文章内容<br>文章内容文章内容文章内容文章内容<br>文章内容文章内容文章内容文章内容</p><h2 id="二级标题-1"><a href="#二级标题-1" class="headerlink" title="二级标题"></a>二级标题</h2><p>Hello JavaScript<br>文章内容文章内容文章内容文章内容<br>文章内容文章内容文章内容文章内容<br>文章内容文章内容文章内容文章内容<br>文章内容文章内容文章内容文章内容<br>文章内容文章内容文章内容文章内容<br>文章内容文章内容文章内容文章内容<br>文章内容文章内容文章内容文章内容</p><h2 id="二级标题-2"><a href="#二级标题-2" class="headerlink" title="二级标题"></a>二级标题</h2><p>Hello JavaScript<br>文章内容文章内容文章内容文章内容<br>文章内容文章内容文章内容文章内容<br>文章内容文章内容文章内容文章内容<br>文章内容文章内容文章内容文章内容<br>文章内容文章内容文章内容文章内容<br>文章内容文章内容文章内容文章内容<br>文章内容文章内容文章内容文章内容</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">a</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;hello word&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>我的博客搭建成功了</title>
+      <link href="/2022/05/02/hello-world/"/>
+      <url>/2022/05/02/hello-world/</url>
+      
+        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Android </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Helloworld </tag>
+            
+            <tag> 博客搭建 </tag>
+            
+            <tag> tags </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+  
+  
+</search>
